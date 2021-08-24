@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>psuedoelement</title>
+    <style>
+        /* h1::before{
+            content: "hi";
+            color: rebeccapurple;
+        }
+        h1::after{
+            content: "After";
+            color:red
+        } */
+        .box{
+            width:300px;
+            height: 100px;
+            background-color: pink;
+            border-radius: 20px;
+            position: absolute;
+        }
+        /* .box-tail{
+            width: 50px;
+            height: 100px;
+            background-color: pink;
+            margin-top: 50px;
+            border: 100px solid black;
+            border-top: 100px solid black;
+            display: inline-block;  
+        } */
+
+        .box::after{
+            content: "";
+            /* width: 40px;
+            height: 40px; */
+            background-color: black;
+            position: absolute;
+            bottom: -39px;
+            left: 237px;
+            border: 20px solid white;
+            border-top-color: white;
+            display: inline-block;
+            border-top-color: pink;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- <h1>Min galar bar</h1> -->
+    <div class="box"></div>
+    <div class="box-tail"></div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selector</title>
+</head>
+<style>
+    /* descendant selector(space) */
+    /* div p{
+        background-color: yellow;
+    } */
+
+    /* child selector(>) */
+    /* div>p{
+        background-color: red;
+    } */
+
+    /* adjacent sibling selector(+) */
+    /* div+p{
+        background-color: black;
+        color:white
+    } */
+
+    /* general sibling slector(~) */
+    div~p{
+        background-color: blue;
+        color: white;
+    }
+</style>
+<body>
+    <div>
+        <p>This is paragraph 1</p>
+        <p>This is paragraph 2</p>
+        <p>This is paragraph 3</p>
+        <section><p>This is paragraph 5</p></section>
+    </div>
+
+    <p>this is adjacent selector</p>
+    <p>This is general sibling selector</p>
+</body>
+</html>

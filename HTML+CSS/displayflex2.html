@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>displayflex2</title>
+</head>
+<style>
+    .box{
+        display: flex;
+    }
+    .item{
+        border: 2px solid black;
+        padding: 20px;
+    }
+    .active{
+        order: 1;/* 1 to order your elements to last place, -1 to put front,0 is default*/
+    }
+</style>
+<body>
+    <div class="box">
+        <div class="item" style="order: -3;">This is 1</div>
+        <div class="item" style="order: -2;">This is 2</div>
+        <div class="item" style="order: -5;">This is 3</div>
+        <div class="item" style="order: 0;">This is 4</div>
+        <div class="item" style="order: 2;">This is 5</div>
+    </div>
+</body>
+</html>

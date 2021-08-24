@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position</title>
+    <style>
+
+        /* static ( Default setting )
+            relative (ခြံခတ်ဖို့)
+            fixed ( ထပ်ဖို့၊ browserမှာကပ်၊ scroll မပါ )
+            absolute ( ထပ်ဖို့၊ document မှာကပ်၊ scroll ပါ၊ )
+            sticky ( ပုံမှန်တိုင်း static၊ သတ်မှတ်ထားတဲ့ နေရာရောက်မှ ကပ် )
+            top, left, bottom, right များသည် position ရှိမှအလုပ်လုပ်သည်။
+            z-index ကို layer ခွဲဖို့အသုံးပြုသည်။ ( z-index များလေ အပေါရောက်လေ ) */
+        .one{
+            width:80px;
+            height: 80px;
+            background-color: black;
+            /* position: absolute; create new layer(cover up other element), stick to the document */
+            /* z-index: 2; */
+        }
+        .two{
+            width: 150px;
+            height: 150px;
+            background-color: pink;
+            /* position: absolute;
+            z-index: 1; */
+        }
+        .three{
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            /* position: absolute; */
+        }
+        .p-fix{
+            border: 2px solid black;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            position: fixed;
+            top: 100px;
+            right: 100px;
+        }
+        .p-fix:hover{
+            background-color: black;
+            color: white;
+            transition: 1s;
+        }
+        .box{
+            width:400px;
+            height: 200px;
+            border: 2px solid black;
+            position: relative;
+        }
+        .item{
+            width:50px;
+            height: 50px;
+            background-color: skyblue;
+            position: absolute;
+            right: 20px;
+            bottom: 20px;
+        }
+    </style>
+</head>
+<body style="height: 4000px;"> 
+    <div class="one"></div>
+    <div class="two"></div>
+    <div class="three"></div>
+
+    <div class="p-fix">fix</div>
+
+    <div class="box">
+        <div class="item"></div>
+    </div>
+</body>
+</html>

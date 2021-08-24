@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Displayflexbox</title>
+</head>
+<style>
+    /* control flexbox from parent element */
+    .container{
+        display: flex;
+        /* flex-direction: row; */
+        /* flex-wrap: wrap; */
+        flex-flow: row wrap;
+        height: 90vh;
+        justify-content: space-around;
+        align-items: flex-start;
+        align-content: space-around;
+    }
+    .col{
+        background-color: gray;
+        width:350px;
+        display: inline-block;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="col">
+            <h1>This is p1</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad eligendi deleniti? Eligendi cum saepe, iste magnam fugiat amet adipisci minus facere, dignissimos ex blanditiis et, officia molestiae perspiciatis voluptatum.</p>
+        </div>
+        <div class="col">
+            <h1>This is p2</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad eligendi deleniti? Eligendi cum saepe, iste magnam fugiat amet adipisci minus facere, dignissimos ex blanditiis et, officia molestiae perspiciatis voluptatum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum nemo natus eveniet optio est aliquam fuga, omnis ipsa atque aliquid sapiente ut, qui deserunt modi laboriosam. Iste hic saepe maiores?</p>
+        </div>
+        <div class="col">
+            <h1>This is p3</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad eligendi deleniti? Eligendi cum saepe, iste magnam fugiat amet adipisci minus facere, dignissimos ex blanditiis et, officia molestiae perspiciatis voluptatum.</p>
+        </div>
+        <div class="col">
+            <h1>This is p4</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad eligendi deleniti? Eligendi cum saepe, iste magnam fugiat amet adipisci minus facere, dignissimos ex blanditiis et, officia molestiae perspiciatis voluptatum.</p>
+        </div>
+        <div class="col">
+            <h1>This is p4</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad eligendi deleniti? Eligendi cum saepe, iste magnam fugiat amet adipisci minus facere, dignissimos ex blanditiis et, officia molestiae perspiciatis voluptatum.</p>
+        </div>
+        <div class="col">
+            <h1>This is p4</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam ad eligendi deleniti? Eligendi cum saepe, iste magnam fugiat amet adipisci minus facere, dignissimos ex blanditiis et, officia molestiae perspiciatis voluptatum.</p>
+        </div>
+  
+    </div>
+</body>
+</html>

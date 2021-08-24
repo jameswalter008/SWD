@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cssselector3</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Klee+One&display=swap');
+        html{
+            scroll-behavior: smooth;
+        }
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Klee One', cursive;
+        }
+        .home{
+            height: 100vh;
+            background-image: url(apple_iphone-12-spring21_lp_us_04202021.jpg.og.jpg);
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            padding: 0 150px;
+            position: relative;
+            z-index: -2;    
+            opacity: 0.5;
+        }
+        .home::before{
+            content: "";
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            /* background: #00b09b;  /* fallback for old browsers */
+            /* background: -webkit-linear-gradient(to bottom, #96c93d, #00b09b);  
+            background: linear-gradient(to bottom, #96c93d, #00b09b);  */
+            background-color: blue;
+            top: 0;
+            left: 0;
+            opacity: 0.5;
+            z-index: -1;
+            backdrop-filter: blur (15px);
+            backdrop-filter: blur(15px);
+        }
+        .home-content{
+            width:350px;
+       
+        }
+        .home-title{
+            color:white;
+        }
+        .home-para{
+            color: white;
+        }
+        .up{
+            height: 40px;
+            width: 40px;
+            background-color: blue;
+            border-radius: 30px;
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            display: flex;
+        }
+        .up-icon{
+            width: 40px;
+        }
+    </style>
+</head>
+<body>
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1 class="home-title">Hello</h1>
+            <p class="home-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque iste nulla, quas eligendi illo exercitationem perferendis reprehenderit eos perspiciatis quos. Nisi ipsa nesciunt laboriosam maiores praesentium excepturi rem eveniet omnis!</p>
+        </div>
+    </section>
+    <section style="height: 100vh;"></section>
+    <section style="height: 100vh;"></section>
+    <div class="up">
+        <a href="#home">
+            <img src="up-arrow.svg" alt="" class="up-icon">
+        </a>
+    </div>
+</body>
+</html>

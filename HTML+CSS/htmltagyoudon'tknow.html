@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="60">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>htmltagyoudontknow</title>
+</head>
+<body>
+    <noscript>
+        <!-- in order to work that you need to diable javascript in your browser setting -->
+        <h1>Browser diable javascript</h1>
+    </noscript>
+    <script>
+        document.write(Math.random());
+    </script>
+
+    <!-- to connect datalist to input element, put list attribute in input element
+    and give the same name as id on datalist -->
+    <input type="text" id="test" list="testdata">
+    <datalist id="testdata">
+        <option value="aa"></option>
+        <option value="bb"></option>
+        <option value="cc"></option>
+    </datalist>
+
+    <!-- can change with queryseletor method -->
+    <progress min='0' max='10' value='6'>
+        <!-- cmd line to control progress -->
+        <!-- document.querySelector("progress").value=... -->
+    </progress>
+
+    <details>
+        <summary>This is one</summary><!-- summary is to change details tag-->
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ut, quae nobis dolorem nulla quia obcaecati tempora hic tenetur voluptatibus ullam pariatur laboriosam voluptatum. Fugiat doloribus ipsum provident exercitationem non!
+    </details>
+    <details>
+        <summary>This is two</summary>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati dicta reprehenderit facere saepe aliquid, odit optio assumenda sed molestiae, fuga quas temporibus officiis praesentium enim nam illo adipisci qui iusto.
+    </details>
+</body>
+</html>
