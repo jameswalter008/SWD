@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>column</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .header{
+            color: blueviolet;
+        }
+        .para{
+            column-count: 3; 
+            column-width: 300px; /*useful in responsive webdesign use with column-count*/
+            column-rule: 2px solid pink;
+            column-gap: 50px;
+        }
+        .para p{
+            margin-bottom: 10px;
+            text-align: justify;
+            line-height: 2;
+        }
+        body{
+            padding: 50px;
+        }
+        .full{
+            column-span: all;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="header">CSS column property</h1>
+    <div class="para">
+        <p class="full">Lorem ipsum dolor sit amet consectetur adipisicing elit. Est laudantium sit nemo, odio at necessitatibus labore obcaecati eaque, unde doloribus blanditiis omnis harum dignissimos aperiam qui cupiditate mollitia officiis sequi.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus cum numquam maxime id reprehenderit! Corporis, fuga quis ab, aliquid distinctio provident reiciendis enim laborum quasi a assumenda rerum mollitia minima?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio asperiores accusamus pariatur corporis sed sunt velit! Ab nemo voluptate consequuntur accusantium! Reiciendis, eligendi saepe. Delectus explicabo eligendi consequatur id enim!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus earum a voluptates labore quam necessitatibus dolorem minima qui. Iure, libero autem error ut eius dicta aspernatur nobis culpa. Laborum, optio.</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae quibusdam, est fuga placeat, accusantium ratione ea enim quae magni cum ipsa, voluptates perspiciatis ut consequatur maxime inventore? Similique, earum veritatis?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel esse culpa, necessitatibus assumenda, minus aliquam, asperiores sit sapiente et pariatur sunt laborum quibusdam? Assumenda eaque unde eveniet iste fugiat deserunt?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus corrupti a aliquam incidunt debitis modi voluptates excepturi provident non laudantium voluptatem rem placeat, praesentium rerum itaque obcaecati in atque dolor?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, temporibus nihil? Doloribus deserunt fugit perferendis quo magni odit tempore officiis tenetur delectus cum quaerat impedit rem amet esse, eaque voluptas.</p>
+    </div>
+</body>
+</html>

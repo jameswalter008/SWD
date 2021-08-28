@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css_var</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        :root{
+            --blue:#6495ed;
+            --white:#c9ff08;
+            --red:#ff0808;
+        }
+        .one{
+            display: flex;
+            background-color:var(--blue);
+            height: 50vh;
+        }
+        .box-left{
+            width: 50%;
+            background-color: hotpink;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box-right{
+            width: 50%;
+            background-color:var(--red);
+            text-align: center;
+            text-align: justify;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">
+        <div class="box-left">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit provident, animi reprehenderit eveniet illo ipsum optio vel voluptates ad repellendus voluptatem natus, cupiditate ab. Quod perspiciatis provident labore qui illo.</p>
+        </div>
+        <div class="box-right">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Enim perferendis aperiam exercitationem corrupti, hic at architecto rem eligendi expedita eum et nobis velit ratione nostrum aspernatur autem, obcaecati possimus assumenda.</p>
+        </div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>

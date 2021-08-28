@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css transform</title>
+    <style>
+        img{
+            width:300px;
+            
+           
+            /* transform: rotate(45deg); */
+        }
+        img:hover{
+            transform: translate(60px); /*move from its current position*/
+            transform: scale(0.9) ;/*sizing*/
+            transition: 1s;
+        }
+        .skew{
+            --yellow:#fae900;
+            width: 400px;
+            min-height: 150px;
+            border: 1px solid var(--yellow);
+            background-color: var(--yellow);
+            transform: skewX(20deg);
+            transform-origin: center;
+        }
+    </style>
+</head>
+<body>
+    <img src="Apple-iPhone-13-to-bring-Potrait-Mode-and-ProRes-for-videos.webp" alt="">
+    <div class="skew">
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore suscipit nulla earum consectetur illum nostrum corporis quia est provident hic aliquid, voluptas quos, voluptatem blanditiis, voluptatum nesciunt unde qui saepe.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias quos officia autem, provident, quae iste eveniet fugit repellat, ratione earum in suscipit. Quae dolorum voluptates modi culpa aperiam a fugiat!</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas natus delectus amet odio harum illum eaque reprehenderit qui sunt ab aliquam exercitationem eum eius quis placeat veritatis, neque facilis provident?</p>
+    </div>
+</body>
+</html>

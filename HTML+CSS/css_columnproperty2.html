@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>columnproperty2</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: border-box;
+            font-family: serif;
+        }
+        .gallery{
+            columns: 3 100px;/*col count col width*/
+            width: 1400px;
+            margin: auto;
+        }
+        .gallery-img{
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+        .gallery-img:hover{
+            filter: grayscale(150%);
+            transition: 0.5s;
+        }
+        .title{
+            margin: 30px auto;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 3em;
+            color: burlywood;
+        }
+
+        @media screen and (max-width:1024px){
+            .gallery{
+                width: 90%;
+                columns: 2 150px;
+            }
+        }
+</style>
+</head>
+<body>
+    <div class="title"><span style="color: blueviolet;">Kht mite mite</span> Gallery</div>
+    <div class="gallery">
+        <img src="apple_iphone-12-spring21_lp_us_04202021.jpg.og.jpg" alt="jpg" class="gallery-img">
+        <img src="Apple-iPhone-13-to-bring-Potrait-Mode-and-ProRes-for-videos.webp" alt=""class="gallery-img">
+        <img src="poe.jpg" alt="jpg"class="gallery-img">
+        <img src="apple_iphone-12-spring21_lp_us_04202021.jpg.og.jpg" alt="jpg"class="gallery-img">
+        <img src="Apple-iPhone-13-to-bring-Potrait-Mode-and-ProRes-for-videos.webp" alt=""class="gallery-img">
+        <img src="poe.jpg" alt="jpg" class="gallery-img">
+        <img src="apple_iphone-12-spring21_lp_us_04202021.jpg.og.jpg" alt="jpg"class="gallery-img">
+        <img src="Apple-iPhone-13-to-bring-Potrait-Mode-and-ProRes-for-videos.webp" alt=""class="gallery-img">
+        <img src="poe.jpg" alt="jpg" class="gallery-img">
+    </div>
+</body>
+</html>
