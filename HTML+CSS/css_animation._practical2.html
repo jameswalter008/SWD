@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anip2</title>
+</head>
+<style>
+    .obj{
+        width: 50px;
+        height: 50px;
+        background-color: aqua;
+        border-radius: 50%;
+        border:5px solid black;
+        border-color: red blue;
+        transform: translate(900px,500px);
+        animation: jump 6s linear;
+    }
+    @keyframes jump{
+        0%{
+            transform: translate(-300px,-500px) rotate(0);
+        }
+        20%{
+            transform: translate(300px,500px) rotate(360deg);
+        }
+        30%{
+            transform: translate(400px,250px) rotate(720deg);
+        }
+        40%{
+            transform: translate(500px,500px) rotate(1080deg);
+        }
+        45%{
+            transform: translate(550px,350px) rotate(1440deg);
+        }
+        50%{
+            transform: translate(600px,500px) rotate(1800deg);
+        }
+        100%{
+            transform: translate(900px,500px) rotate(2160deg);
+        }
+    }
+</style>
+<body>
+    <div class="obj"></div>
+</body>
+</html>
