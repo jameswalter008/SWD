@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ani-pac3</title>
+    <style>
+        .room{
+            width: 600px;
+            height: 500px;
+            background-image: url(assets/aniimages/Capture.PNG);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: bottom;
+            margin: 100px auto;
+            position: relative;
+        }
+        .lu-div{
+            position: absolute;
+            top: 287px;
+            left: 166px;
+        }
+        .lu{
+            width: 100px;
+        }
+        .knife{
+            width: 100px;
+            position: absolute;
+            top: 287px;
+            left: 200px;
+            animation: slice 2s;
+        }
+        .boy{
+            animation: toLeft 2s 2s;
+        }
+        .girl{
+            animation: toRight 2s 2s;
+        }
+        .fa{
+            width: 100%;
+            height: 100%;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+        }
+        @keyframes slice{
+            0%{
+                top: 500px;
+            }
+            40%{
+                top: 287px;
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(60deg) ;
+            }
+            60%{
+                transform: rotate(0deg);
+            }
+            70%{
+                transform: rotate(60deg) ;
+            }
+            80%{
+                transform: rotate(0deg);
+            }     
+            90%{
+                transform: rotate(60deg) ;
+            }
+            100%{
+                transform: rotate(0deg);
+            }
+        }
+        @keyframes toRight{
+            from{
+                transform: translate(0px);
+            }
+            to{
+                transform: translate(100px);
+            }
+        }
+        @keyframes toLeft{
+            from{
+                transform: translate(0px);
+            }
+            to{
+                transform: translate(-100px);
+            }
+        }
+        @keyframes fa{
+            0%{
+                top: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="room">
+       <div class="lu-div">
+            <img class="lu boy" src="assets/aniimages/boy.png" alt="">
+            <img class="lu girl" src="assets/aniimages/girl.png" alt="">
+       </div>
+       <img src="assets/aniimages/knife.png" class="knife" alt="">
+       <div class="fa">
+            <img src="assets/aniimages/fa.png" style="width: 100px;" alt="">
+       </div>
+    </div>
+</body>
+</html>
