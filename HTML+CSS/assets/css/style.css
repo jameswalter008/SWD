@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+
+:root{
+    --primary:#0c89ef;
+    --danger:red;
+    --white:white;
+    --sime-dark:#242526;
+    --soft-dark:#3a3b3c;
+    --danger:#f02849;
+    --warning:#dda728;
+    --text:#b7b9bd;
+    --success:#44b960;
+    --dark:#18191a;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family:'Lato',sans-serif;
+    color: var(--text);
+}
+
+body{
+    background-color: var(--dark);
+}
+.nav{
+    background-color: var(--sime-dark);
+    height: 60px;
+    display: flex;
+}
+.left{
+    width: 20%;
+}
+.left-box{
+    display: flex; 
+    padding: 10px;
+    align-items: center;
+}
+.logo{
+    width: 40px;
+    margin-right: 10px;
+}
+.search-box{
+    background-color: var(--soft-dark);
+    padding: 10px 20px;
+    border-radius: 100px;
+    display: flex;
+}
+.search-box .feather-search{
+    margin-right: 10px;
+}
+.search-input{
+    color: var(--text);
+    background-color: var(--soft-dark);
+    border: 0px;
+}
+.search-input:focus{
+    outline: none;
+}
+
+/* center */
+.center{
+    width: 54%;
+    display: flex;
+    justify-content: center;
+}
+.center-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.center-link{
+    display: flex;
+    width: 95px;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 5px solid var(--sime-dark);
+    position: relative;
+}
+.center-link.active{
+    border-bottom-color: var(--primary);
+}
+
+.center-link:hover{
+    background-color: var(--soft-dark);
+    border-radius: 20px;
+    transition: 0.5s;
+}
+
+.center-link.active:hover{
+    background-color: var(--sime-dark);
+    border-radius: 0px;
+}
+
+.center-link.active .center-icon{
+    color: var(--primary);
+}
+
+.center-icon{
+    font-size: 25px;
+}
+
+.center-link .notification{
+    background-color: red;
+    padding: 5px 7px;
+    border-radius: 90px;
+    font-size: 10px;
+    position: absolute;
+    top: 0px;
+    right: 21px;
+    font-weight: 900;
+    color: white;
+}
+
+.right{
+    width: 20%;
+}
+.right-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display:flex-end;
+}
+.profile{
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    transition: 0.5s;
+    border-radius: 50px;
+}
+.profile:hover{
+    background-color: var(--soft-dark);
+    border-radius: 50px;
+    
+}
+.profile-pic{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+.profile-name{
+    width: 150px;
+    color: var(--text);
+    font-weight: bolder;
+}
+.notification-box{
+    display: flex;
+}
+.right-notification{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--soft-dark);
+    border-radius: 50%;
+    margin: 5px;
+}
+.right-notification:hover{
+    background-color: var(--dark);
+    color: var(--soft-dark);
+    transition: 0.5s;
+}
+
+/* fb-body */
+.left-aside{
+    width: 25%;
+}
+.fb-body{
+    display: flex;
+}
+
+.newsfeed{
+    width: 50%;
+}
+.myday-list{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    position: absolute;
+    /* overflow-y: scroll; */
+}
+.myday-item{
+    margin-right: 10px;
+}
+.myday{
+    background-image: url(../files/aungkhantmoe.jpg);background-size: cover;background-position: center;
+    width: 130px;
+    height: 200px;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 20px;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+}
+.myday-owner{
+    width: 40px;
+    height: 40px;
+    background:var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.myday-owner-1{
+    width: 40px;
+    height: 40px;
+    background:var(--sime-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.myday-owner-1 .feather-plus{
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+.myday-owner-img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-size: 100%;
+    background-position: center;
+}
+.myday-text{
+    color: var(--white);
+    font-weight: bolder;
+}
+.scroll-my-day{
+    width: 30px;
+    height: 30px;
+    background-color: black;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.addpost{
+
+}
+.posts{
+
+}
+.chat-box{
+    width: 25%;
+}
