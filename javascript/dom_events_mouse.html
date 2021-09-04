@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event mouse</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+        }
+    </style>
+</head>
+<body>
+    <div onmouseover="mouseover(this)" onmouseout="mouseout(this)" >
+        over me
+    </div>
+
+    <div onmousedown="mousedown(this)" onmouseup="mouseup(this)" >
+        Click me
+    </div>
+
+    <script>
+
+        function mouseover(id){
+            id.innerHTML="Relase Me"
+        }
+
+        function mouseout(id){
+            id.innerHTML="Mouse over me"
+        }
+
+        function mousedown(id){
+            id.innerHTML="Release me"
+        }
+
+        function mouseup(id){
+            id.innerHTML="Thank you"
+        }
+
+    </script>
+</body>
+</html>

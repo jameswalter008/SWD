@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom form</title>
+</head>
+<body>
+    <p>input number must be between 1 to 10</p>
+
+    <form name="fillout" action="">
+        <input name="num" type="text">
+        <button type="button" onclick="myfunction()">add</button>
+    </form>
+
+    <p id="result"></p>
+
+<!-- 
+    <form name="fill" action="" onsubmit="return validationform()" method="POST">
+        Name: <input type="text" name="fname">
+        <input type="submit" value="register">
+    </form> -->
+
+
+    <script>
+        // function validationform(){
+        //     let x=document.forms["fill"]["fname"].value;
+        //     if(x==""){
+        //         alert("Name must be filled out");
+        //     }
+        // }
+
+        function myfunction(){
+            // get value of input field from an element with id "num"
+            let x=document.forms["fillout"]["num"].value;
+            let text;
+            if(isNaN(x) || x<1 || x>10 || x==""){
+                text="input invalid";
+            }
+            else{
+                text="input ok";
+            }
+        document.getElementById("result").innerHTML=text;
+        }
+    </script>
+</body>
+</html>

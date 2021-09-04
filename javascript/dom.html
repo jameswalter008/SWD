@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+    <style>
+        img{
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <img src="../HTML+CSS/Apple-iPhone-13-1.webp" id="one" alt="">
+    <img src="../HTML+CSS/Apple-iPhone-13-1.webp" class="two" alt="">
+    <img src="../HTML+CSS/Apple-iPhone-13-1.webp" class="two" alt="">
+
+    <form id="frm" action="">
+        First Name: <input type="text" value="Aung"><br>
+        Last Name: <input type="text" value="Khant Moe">
+    </form>
+    <p id='add'></p>
+    <script>
+        // method (add or delete html)
+        document.write("hello world")
+
+        // properties (get or set html elements)
+        // document.body
+
+        // ____CSS SELECTOR_____
+        // document.querySelectorAll("img").forEach(function(el,index){
+        //     console.log(el)
+        // })
+
+        // const x=document.getElementById('frm');
+        // let text="";
+        // for(let i=0;i<x.length;i++){
+        //     text+=x.elements[i].value+"<br>";
+        // }
+        // document.getElementById("add").innerHTML=text;
+
+
+        document.querySelectorAll("img").forEach(function(el,index){
+            el.src=`../HTML+CSS/apple_iphone-12-${index+1}.jpg`
+        });
+
+    
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>events</title>
+</head>
+<body>
+    <h1 onclick="this.innerHTML='Yamate!'">Click me yo</h1>
+    <h1 onclick="display(this)" >Click on this text</h1>
+
+    <button id="date" onclick="" >want to know what day is today?</button>
+    <p id="demo"></p>
+
+    <!-- UpperCase -->
+    <input type="text" id="upper" onchange="uppercase()"><br>
+
+    <!-- onclick attr -->
+    <button onclick="run()">on Click</button>
+
+    <script>
+        // html event
+        function display(id){
+            id.innerHTML="Yo!"
+        }
+
+        // Display date HTML DOM EVENT
+        document.getElementById("date").onclick=displayDate;
+
+        function displayDate(){
+            document.getElementById("demo").innerHTML=Date();
+        }
+
+
+        // uppercase
+        function uppercase(){
+            let x=document.getElementById("upper");
+            x.value=x.value.toUpperCase();
+        }
+
+        // Event:onclick attr
+        function run(){
+            alert("This is onclick attr")
+        }
+    </script>
+</body>
+</html>

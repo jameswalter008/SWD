@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventlistener</title>
+</head>
+<body>
+    <!-- <p id="click">Click Me</p> -->
+
+    <button id="listen">Click me</button>
+
+    <script>
+        // document.getElementById("click").addEventListener("click",function(){
+        //     alert("This is eventlistener")
+        // })
+
+        let x=document.getElementById("listen")
+        x.addEventListener("click",functionone());
+        x.addEventListener("click",functiontwo());
+
+        function functionone(){
+            alert("This is one click")
+        }
+        function functiontwo(){
+            alert("This is two click")
+        }
+    </script>
+</body>
+</html>
