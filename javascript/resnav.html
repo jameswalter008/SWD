@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>res-nav</title>
+    <style>
+        header{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            margin: 10px auto;
+        }
+        .brand{
+
+        }
+        .mobile-web-btn{
+            display: none;
+        }
+        .nav{
+
+        }
+        .nav-list{
+            padding: 0px;
+        }
+        .nav-list li{
+            list-style-type: none;
+            display: inline-block;
+        }
+        .nav-item{
+
+        }
+
+        @media screen and (max-width:480px){
+            header{
+                width: 100%;
+                flex-wrap: wrap;
+            }
+            .mobile-web-btn{
+                display: block;
+            }
+            .nav{
+                display: block;
+                width: 100%;
+            }
+            .nav-list li{
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <a href="">MMS IT</a>
+        </div>
+
+        <button class="mobile-web-btn">
+            M
+        </button>
+
+        <nav class="nav">
+            <ul class="nav-list">
+                <li>
+                    <a class="nav-item" href="#">Home</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="#">About</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="#">Services</a>
+                </li>
+                <li>
+                    <a class="nav-item" href="#">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+</body>
+</html>

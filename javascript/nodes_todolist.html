@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todolist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        #btn-add{
+            padding: 10px;
+        }
+        #input{
+            border-radius: 10px;
+            padding: 0px;
+        }
+    </style>
+</head>
+<body>
+    <h1>To Do list by Me</h1>
+    <div class="add">
+        <div class="add-box">
+            <input type="text" id="input" onkeyup="upper()">
+            <button id="btn-add" onclick="Add()">add</button>
+        </div>
+
+        <ul id="list">
+
+        </ul>
+    </div>
+
+    <script>
+        function upper(){
+            let e=document.getElementById("input");
+            e.value=e.value.toUpperCase();
+        }
+
+        let mintext=3;
+        let i=1;
+
+        let input=document.getElementById("input");
+        let list=document.getElementById("list");
+
+        function textfilter(x){
+            if (x.length >=mintext){
+                return x;
+            }
+            else
+            {
+                alert("Text must be at least 3");
+                return false;
+            }
+        }
+
+        function showlistbckup(text){
+            list.innerHTML+=`<li class="animate__animated animate__bounceInDown" id="list${i}">
+                <button class="btn-edit" onclick="editList(${i})">edit</button>
+                <button class="btn-delete" onclick="deletelist(${i})">delete</button>
+                <span id="listText${i}">${text}</span>
+                </li>`;
+            i++;
+        }
+        function showlist(text){
+            let btnedit=document.createElement('button');
+            let btndelete=document.createElement('button');
+            let btnedittext=document.createTextNode("edit");
+            let btndeletext=document.createTextNode('delete');
+            let li=document.createElement("li");
+            let content=document.createTextNode(text);
+            let textholder=document.createElement('span');//<span></span>
+            li.classList="listid animate__animated animate__fadeInDown";
+            li.setAttribute('id',`list${i}`);
+            li.appendChild(content);//<li>text</li>
+            list.appendChild(li);//<ul><li></li></ul>
+            textholder.appendChild(content);
+            textholder.setAttribute('id',`span-text${i}`)
+           
+            btnedit.appendChild(btnedittext);
+            btndelete.appendChild(btndeletext);
+
+            btndelete.setAttribute('onclick',`deleteListnode(${i})`);
+            btnedit.setAttribute('onclick',`editListnode(${i})`);
+
+            
+            li.appendChild(btnedit);
+            li.appendChild(btndelete);
+            li.appendChild(textholder);
+            i++;
+        }
+
+        function deleteListnode(id){
+            let currentlist=document.getElementById(`list${id}`);
+            let sure=confirm("are you sure you want to delete?",currentlist.innerHTML);
+            if(sure){
+                list.removeChild(currentlist);
+            }
+        }   
+
+        function editListnode(id){
+            let currenttext=document.getElementById(`span-text${id}`);
+            let newtext=prompt("Say something",currenttext.innerHTML);
+            if(textfilter(newtext)){
+                currenttext.innerHTML=newtext;
+            }
+        }
+
+        function deletelist(listId){
+            let current = document.getElementById(`list${listId}`);
+            let currentText = document.getElementById(`listText${listId}`).innerHTML;
+            let confirmdelete = confirm("Are you sure you want to delete",currentText)
+            if (confirmdelete){
+                list.removeChild(current);
+            }
+            else
+            {
+                console.log("delete cancle");
+            }
+        }
+
+        function editList(listId){
+            let current=document.getElementById(`listText${listId}`);
+            let newtext=prompt("Are you sure you want to edit?",current.innerHTML);
+
+            if (textfilter(newtext)){
+                current.innerHTML=newtext;
+            }
+        }
+
+        function Add(){
+            let inputtext=textfilter(input.value);
+
+            if(inputtext){
+                showlist(inputtext);
+                input.value="";
+            }
+        }
+
+    </script>
+</body>
+</html>

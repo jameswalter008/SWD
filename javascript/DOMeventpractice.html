@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nodes</title>
+</head>
+<body>
+    <input type="text" id="input" onchange="upper()"><button id="add-btn">add</button>
+    <ul id="list" ></ul>
+
+    <script>
+        let input=document.getElementById("input");
+        let list=document.getElementById("list");
+        let btn=document.getElementById("add-btn");
+        let i=1;
+
+        function upper(){
+            let y=document.getElementById("input")
+            y.value=y.value.toUpperCase();
+        }
+
+        document.getElementById("add-btn").addEventListener("click",function(){
+            let x=input.value;
+            console.log(x);
+            list.innerHTML+=`<li class="list" id="list-${i}"><button class="delete-btn">Delete</button><span>${x}</span>`
+            i++;
+        })
+
+    </script>
+</body>
+</html>
