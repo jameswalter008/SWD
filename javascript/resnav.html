@@ -6,18 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>res-nav</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        
+        *{
+            box-sizing: border-box;
+            padding: 0px;
+            margin: 0px;
+            font-family: 'Loto',sans-serif;
+        }
+        body{
+            background-color: #f5f5f5;
+        }
         header{
             display: flex;
             align-items: center;
             justify-content: space-between;
-            width: 100%;
-            margin: 10px auto;
+            width: 90%;
+            margin: auto;
+            background-color: #ffff;
+            padding: 15px ;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+            transition: 0.5s;
+        }
+        header:hover{
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.15);
+        }
+        header a{
+            color: deepskyblue;
+            text-decoration: none;
         }
         .brand{
 
         }
+        .brand a{
+            color: skyblue;
+            font-weight: bolder;
+            font-size: 1.5rem;
+        }
         .mobile-web-btn{
+            background-color: deepskyblue;
             display: none;
+            border: none;
+            padding: 10px 15px;
+            width: 60px;
+            text-align: center;
+            font-weight: bolder;
+            color: white;
         }
         .nav{
 
@@ -30,23 +64,56 @@
             display: inline-block;
         }
         .nav-item{
-
+            background-color: deepskyblue;
+            color: white;
+            padding: 10px 15px;
+            display: inline-block;
+            width: 120px;
+            text-align: center;
         }
 
         @media screen and (max-width:480px){
             header{
                 width: 100%;
                 flex-wrap: wrap;
+                margin: 0px;
             }
             .mobile-web-btn{
                 display: block;
             }
             .nav{
-                display: block;
+                display: none;
                 width: 100%;
             }
             .nav-list li{
+                display: block; 
+                width: 100%;
+            }
+            .nav-item{
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+
+            .show-nav{
                 display: block;
+                animation: showslow 0.5s;
+                position: absolute;
+                background-color: #ffff;
+                top: 66px;
+                right: 0px;
+                padding: 10px;
+                z-index: -1;
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05);
+            }
+        }
+
+        @keyframes showslow{
+            0%{
+                transform: translateY(-100px);
+            }
+            100%{
+                transform: translateY(0px);
             }
         }
     </style>
@@ -57,7 +124,7 @@
             <a href="">MMS IT</a>
         </div>
 
-        <button class="mobile-web-btn">
+        <button class="mobile-web-btn" onclick="navControl()">
             M
         </button>
 
@@ -78,5 +145,12 @@
             </ul>
         </nav>
     </header>
+    <script>
+        let nav=document.querySelector("nav");
+        function navControl(){
+            nav.classList.toggle("show-nav");
+        }
+
+    </script>
 </body>
 </html>
