@@ -4,29 +4,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>stringmethod</title>
-    <style>
-
-    </style>
+    <title>String_method</title>
 </head>
 <body>
-    <h4>10 useful String methods in JS</h4>
-    <ol>
-        <li>indexOf()</li>
-        <li>search()</li>
-        <li>slice(start,end)</li>
-        <li>substring(start,length)</li>
-        <li>substr(start,length)</li>
-        <li>toUpperCase()</li>
-        <li>toLowerCase()</li>
-        <li>replace()</li>
-        <li>trim()</li>
-        <li>split()</li>
-    </ol>
-
+    <p id="demo">Please visit Microsoft and Microsoft!</p>
+    <p id="negative"></p>
+    <p id="one">go to microsoft and microsoft.</p>
+    <p id="regularexp"></p>
     <script>
-        let name="aung khant moe";
-        
+        // str="Apple, Banna, Kiwi";
+        //slice(start,end)start is exclusive and end is incluive
+
+        // document.getElementById("demo").innerHTML= str.slice(14,19);
+        // document.getElementById("negative").innerHTML=str.slice(-12,-6);
+        // document.getElementById("one").innerHTML=str.slice(7);
+
+
+        //substr(start,end) simlar to slice but cannot accept negative indexes.
+
+        // document.getElementById("demo").innerHTML=str.substr(14,19);
+        // document.getElementById("one").innerHTML=str.substr(7);
+
+        // replace(value,replaced value) replace method replace only the first match
+        // replace method is case sensitive and to avoid that use regular expression /value/i
+        // i is modifier in regular exp, i use in regular exp to avoid case sensitive
+        // g is gloabl, it won't stop once its found the first match, it will continue to change other value.
+        let text=document.getElementById("demo").innerHTML;
+        document.getElementById("demo").innerHTML=text.replace("Microsoft","Linux");
+
+        // replace using with regular exp
+        let store=document.getElementById("one").innerHTML;
+        document.getElementById("demo").innerHTML=store.replace(/microsoft/g,"Operating System")
+
+
+        // concat is adding some string between two strings or more complicated strings
+        let say="Hello";
+        let say1="World";
+        let plus=say.concat(" ",say1)
+        console.log(plus)
+
+        // indexOf() method returns index number of ur selected string
+        let name="aung khant moe khant";
+        console.log(name.indexOf("khant"))
     </script>
 </body>
 </html>
