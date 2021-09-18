@@ -7,13 +7,17 @@
   <title>Document</title>
 </head>
 <body>
-  <button onclick="myfunction()">click me</button>
-  <p id="demo">Please visit Microsoft</p>
+  <p id="demo"></p>
+  <!-- regular experssion -->
   <script>
-      function myfunction(){
-        let text=document.getElementById("demo").innerHTML;
-        document.getElementById("demo").innerHTML=text.replace(/microsoft/i,"W3school")
-      }
+      let text="\nIs th\nis it?";
+      let text1="Is this all there is?";
+      let d="try to get 100% in every subject.";
+      let n=100;
+      let color="red yellow red green green white";
+      
+      document.getElementById("demo").innerHTML=text1.search(/i/g)
+
   </script>
 </body>
 </html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web_api</title>
+</head>
+<body>
+    <input type="file" id="upload" multiple>
+    <ul id="list"></ul>
+
+    <!-- <form action="" id="test">
+        <input type="text" name="uname" required>
+        <br>
+        <input type="text" name="password" required>
+        <br>
+        <button>register</button>
+    </form> -->
+
+    <script>
+        // let a=new Audio('')
+        document.getElementById("upload").addEventListener("change",function(){
+            // let upload=this.files;
+            // console.log(upload.length)
+            // for(x of upload){
+            // console.log(x);
+            // document.getElementById('list').innerHTML+=`<li>${x.name}</li>`
+
+            let upload=this.files;
+            let ulength=upload.length;
+            var i=0;
+
+            while(i<ulength){
+                let file=upload[i];
+                console.log(file);
+                i++;
+            }
+        })
+  
+    //    document.getElementById("test").addEventListener("submit",function(e){
+    //        e.preventDefault();
+    //        let x=new FormData(this);
+    //        x.append("job","web dev")
+    //        x.append("style","khtmitemite")
+
+    //        for(let pair of x.entries()){
+    //            console.log(pair[0]+"-"+pair[1])
+    //        }
+    //    })
+    </script>
+</body>
+</html>

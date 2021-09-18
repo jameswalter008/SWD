@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tesla</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            /* box-sizing: border-box; */
+        }
+        .news{
+            width: 80%;
+            margin: 100px auto;
+            columns: 4 100px;
+            column-gap: 10px;
+        }
+        .card{
+            width:100%;
+           
+        }
+        .card-img{
+            width: 100%;
+        }
+        .title{
+
+        }
+        .small{
+            padding: 10px 0px;
+        }
+        .author{
+            font-weight: bolder;
+            
+        }
+        .des{
+            margin: 10px 0px;
+        }
+        .description{
+
+        }
+        .readmore{
+
+        }
+    </style>
+</head>
+<body>
+    <div class="news">
+        
+           
+    </div>
+    </div>
+    <script src="tesla.js"></script>
+    <script>
+      console.log(tesla);
+      let article=tesla.articles;
+      let news=document.querySelector(".news");
+      article.map(function(el,index){
+          console.log(el)
+        news.innerHTML+=`
+            <div class="card">
+                <img class="card-img" src="${el.urlToImage}" alt="">
+                <h4 class="title">${el.title}</h4>
+                <div class="small">
+                    <small class="author">${el.author}</small>
+                </div>
+                <div class="des">
+                    <p class="description">${el.description}</p>
+                    <a href="${el.url}" class="readmore">Read More</a>
+                </div>
+            </div>
+        `
+      });
+    </script>
+</body>
+</html>

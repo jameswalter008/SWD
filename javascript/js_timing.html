@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timing</title>
+</head>
+<body>
+    <h4>timing bomb</h4>
+    <ul>
+        <li>setTimeout(function,miliseconds)</li>   <!-- executes your function at ur specified time-->
+        <li>clearTimeout(funtion)</li>
+    </ul>
+    <h4>timing exact</h4>
+    <ul>
+        <li>setInterval(function,milisecond)</li>   <!-- it executes your function at ur specified time continuously -->
+        <li>clearInterval(function)</li> 
+    </ul>
+    <script>
+        function test(){
+            console.log("this is a test"+Math.random());
+        }
+        let run=setInterval(test,3000);
+
+    </script>
+</body>
+</html>

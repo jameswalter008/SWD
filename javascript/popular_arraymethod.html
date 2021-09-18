@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>
+        Most Popular Array Methods
+    </h4>
+    <ul>
+        <li>map</li>
+        <li>filter</li>
+        <li>reduce</li>
+    </ul>
+    <script>
+        let arr=["apple","banna","grapes"];
+        let apidata=[
+            {
+                id:1,
+                name:"aung khant moe",
+                age:"21",
+                address:"yangon",
+                room:"b",
+                donate:500
+            },
+            {
+                id:2,
+                name:"min htet myat",
+                age:21,
+                address:"hlaing",
+                room:"a",
+                donate:500
+            },
+            {
+                id:3,
+                name:"moeaung",
+                age:20,
+                address:"hlaing",
+                room:"a",
+                donate:1000
+            }
+        ];
+
+        // let arx=arr2.map(function(element,index){
+        //         return index+1+"-"+element.name;
+        // })
+        // console.log(arx);
+
+        // arrow call back function
+        // filter method returns whole item or element in a given array while map only returns the value we want
+        let api=apidata.filter(el=>el.room==="a") //x is accumulated(stored area of total value)in reduce method
+        console.log(api)
+    </script>
+</body>
+</html>

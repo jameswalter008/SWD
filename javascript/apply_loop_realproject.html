@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loop_project</title>
+    <style>
+        table{
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+        }
+        tr,td{
+            padding: 10px 15px;
+            border: 1px solid black;
+        }
+        .dark{
+            background-color: black;
+        }
+        .middle{
+            display: flex;
+            width: 200px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .container{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+  <div class="container">
+    <div class="middle">
+        <h4>Global</h4>
+        <table>
+            <tbody id="tbody"></tbody>
+        </table><br>
+        <h4>Country</h4>
+        <table>
+            <thead>
+                <td>No</td>
+                <td>Country</td>
+                <td>CountryCode</td>
+                <td>Total Deaths</td>
+                <td>New Recovered</td>
+                <td>New Deaths</td>
+            </thead>
+            <tbody id="ctb">
+         
+            </tbody>
+        </table>
+    </div>
+  </div>
+   
+    <script src="covid.js"></script>
+    <script>
+        let i=1;
+        console.log(news)
+        let global=news.Global;
+        let country=news.Countries;
+        let tb=document.getElementById("tbody");
+        let ctb=document.getElementById("ctb");
+        for(x in global){
+            tb.innerHTML+=`<tr>
+                                <td>${x}</td>
+                                <td>${global[x]}</td>
+                            </tr>`;
+        }
+
+        // for(x of country){
+        //     ctb.innerHTML+=`
+        //     <tr>
+        //         <td>${i}</td>
+        //         <td>${x.Country}</td>
+        //         <td>${x.TotalConfirmed}</td>
+        //     </tr>`;
+
+        //     i++;
+        // }
+
+        country.map(function(el,index){
+            ctb.innerHTML+=`
+                <tr>
+                    <td>${index+1}</td>
+                    <td>${el.Country}</td>
+                    <td>${el.CountryCode}</td>
+                    <td>${el.TotalDeaths}</td>
+                    <td>${el.TotalRecovered}</td>
+                    <td>${el.NewDeaths}</td>
+                </tr>
+            `;
+        })
+
+    </script>
+</body>
+</html>
